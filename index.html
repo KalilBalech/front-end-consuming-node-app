@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumindo Rota GET com Axios</title>
+</head>
+<body>
+    <style>
+        button{
+            display: block;
+        }
+    </style>
+
+<h1>ENVIAR ARQUIVO</h1>
+    <input type="file" id="fileInput">
+    <p id="imagemResponse"></p>
+    <button onclick="sendImage()">Enviar imagem</button>
+    
+    <h1>Processa dados de um formulário enviados via comando POST</h1>
+    <form action="submit">
+        <input type="text" placeholder="Nome" name="name" id="name">
+        <input type="text" placeholder="Sobrenome" name="lastName" id="lastName">
+        <input type="number" placeholder="Idade" name="age" id="age">
+        <button type="submit" onclick="sendUserInfo()">Enviar</button>
+    </form>
+    <p id="responseUser"></p>
+    
+    <h1>Processa dados de um formulário enviados via comando GET</h1>
+    <form action="submit">
+        <input type="text" placeholder="Nome" name="name" id="name2">
+        <input type="text" placeholder="Sobrenome" name="lastName" id="lastName2">
+        <input type="number" placeholder="Idade" name="age" id="age2">
+        <button type="button" id="button2" onclick="sendUserInfoGet()">Enviar</button> <!---o type button é pra nao dar reload-->
+    </form>
+    <p id="responseUser2"></p>
+    
+    <h1>Resposta da Rota GET, com dados no formato JSON</h1>
+    <p id="JSONdata"></p>
+    <button onclick="getJSONdata()">Pegar dados no formato JSON de uma suposta DB</button>
+    <p id="response"></p>
+    
+    <h1>PEGAR ARQUIVO ESTÁTICO</h1>
+    <img id="imagemDoCBUM" src="">
+    <p id="getImage"></p>
+    <button onclick="getImage()">Pegar imagem</button>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    
+    <script src="index.js"></script>
+</body>
+</html>
